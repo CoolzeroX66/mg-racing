@@ -1,0 +1,123 @@
+/* Reifen-Management */
+.tyre-toolbar{display:flex;align-items:center;justify-content:space-between;margin-bottom:18px;flex-wrap:wrap;gap:10px}
+.tyre-toolbar-left{display:flex;align-items:center;gap:14px}
+.tyre-race-count{font-size:12px;font-weight:700;color:var(--teal);background:#eaf7f5;padding:5px 10px;border-radius:20px}
+
+/* Formular */
+.tyre-form-panel{background:#f5f8ea;border:2px solid var(--teal);padding:22px 24px;margin-bottom:20px}
+.tyre-form-title{margin:0 0 16px;font:700 18px 'Barlow Condensed';color:var(--ink)}
+.tyre-form-row{display:grid;grid-template-columns:1fr 2fr auto auto;gap:14px;align-items:end}
+.tyre-form-label{display:grid;gap:7px;font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.tyre-form-label--disabled{opacity:.45;pointer-events:none}
+.tyre-form-label--qty{min-width:110px}
+.tyre-select{border:1px solid var(--line);background:#fff;padding:10px 11px;font:500 13px 'DM Sans';color:var(--ink);width:100%;cursor:pointer}
+.tyre-select:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.tyre-qty-input{border:1px solid var(--line);background:#fff;padding:10px 11px;font:600 14px 'DM Sans';color:var(--ink);width:100%;text-align:center}
+.tyre-form-actions{display:flex;gap:10px;margin-top:16px;align-items:center}
+@media(max-width:780px){.tyre-form-row{grid-template-columns:1fr;gap:10px}}
+@media(max-width:780px){.tyre-form-row--4col{grid-template-columns:1fr;gap:10px}}
+
+/* Tabelle */
+.tyre-panel{max-width:960px}
+.tyre-table-wrap{overflow-x:auto;margin:-4px}
+.tyre-table{width:100%;border-collapse:collapse;font-size:13px}
+.tyre-table thead th{text-align:left;font:700 10px 'DM Sans';letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding:8px 12px;border-bottom:2px solid var(--line);white-space:nowrap}
+.tyre-table tbody tr{border-bottom:1px solid var(--line);transition:background .15s}
+.tyre-table tbody tr:hover{background:#f8faf6}
+.tyre-row--active{background:#f0f9f5}
+.tyre-table td{padding:12px 12px;vertical-align:middle}
+.tyre-th-check{width:40px;text-align:center}
+.tyre-cell-art{font-size:11px;color:var(--muted);white-space:nowrap;font-family:monospace}
+.tyre-cell-mfr{font-weight:700;white-space:nowrap}
+.tyre-cell-name{color:var(--ink)}
+.tyre-cell-qty{text-align:center}
+.tyre-empty{text-align:center;color:var(--muted);font-size:13px;padding:32px 16px}
+.tyre-cell-no{min-width:90px}
+.tyre-no-cell-input{border:1px solid transparent;background:transparent;padding:4px 6px;font:500 13px 'DM Sans';color:var(--ink);width:100%;border-radius:3px}
+.tyre-no-cell-input:hover{border-color:var(--line);background:#fff}
+.tyre-no-cell-input:focus{outline:2px solid var(--teal);border-color:var(--teal);background:#fff}
+
+/* Checkbox */
+.tyre-check-cell{text-align:center;width:40px}
+.tyre-checkbox-wrap{display:inline-flex;cursor:pointer;position:relative}
+.tyre-checkbox-wrap input{position:absolute;opacity:0;width:0;height:0}
+.tyre-checkbox{width:20px;height:20px;border:2px solid var(--line);background:#fff;display:flex;align-items:center;justify-content:center;border-radius:3px;transition:all .15s}
+.tyre-checkbox-wrap input:checked ~ .tyre-checkbox{background:var(--teal);border-color:var(--teal)}
+.tyre-checkbox-wrap input:checked ~ .tyre-checkbox::after{content:'✓';color:#fff;font-size:13px;font-weight:700;line-height:1}
+
+/* Badges */
+.tyre-badge{display:inline-block;padding:3px 8px;border-radius:10px;font-size:10px;font-weight:700;letter-spacing:.05em;white-space:nowrap}
+.tyre-badge--asphalt{background:#e8f4ea;color:#2a6e3a}
+.tyre-badge--carpet{background:#e8eef9;color:#2a3e7a}
+
+/* Qty stepper */
+.tyre-qty-wrap{display:flex;align-items:center;gap:4px;justify-content:center}
+.tyre-qty-btn{border:1px solid var(--line);background:#fff;color:var(--teal);width:24px;height:24px;font:700 14px 'DM Sans';cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center}
+.tyre-qty-btn:hover{background:var(--teal);color:#fff;border-color:var(--teal)}
+.tyre-qty-wrap span{min-width:24px;text-align:center;font-weight:700}
+
+/* Delete */
+.tyre-delete-btn{border:none;background:none;color:#ccc;font-size:14px;cursor:pointer;padding:4px 6px;border-radius:4px}
+.tyre-delete-btn:hover{background:#fdecea;color:#c0392b}
+
+/* Inline-Eingabe für neue Hersteller / Modelle */
+.tyre-form-col{display:flex;flex-direction:column;gap:6px}
+.tyre-select-row{display:flex;gap:6px;align-items:center}
+.tyre-select-row .tyre-select{flex:1}
+.tyre-edit-btn{border:1px solid var(--line);background:#fff;color:var(--teal);padding:6px 9px;font-size:13px;cursor:pointer;border-radius:2px;flex-shrink:0;line-height:1}
+.tyre-edit-btn:hover{background:var(--teal);color:#fff}
+.tyre-inline-input-row{display:flex;flex-wrap:wrap;gap:6px;align-items:center;background:#eef5f0;border:1px dashed var(--teal);padding:8px 10px;margin-top:2px}
+.tyre-model-input-row{background:#eef3f8;border-color:#4a6ea8}
+.tyre-inline-input{border:1px solid var(--line);background:#fff;padding:7px 9px;font:500 13px 'DM Sans';color:var(--ink);flex:1;min-width:140px}
+.tyre-inline-input:focus{outline:2px solid var(--teal);border-color:var(--teal)}
+.tyre-inline-surface{display:flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--ink);cursor:pointer;white-space:nowrap}
+.tyre-inline-surface input{accent-color:var(--teal)}
+@media(max-width:780px){.tyre-form-row{grid-template-columns:1fr}.tyre-inline-input-row{flex-direction:column;align-items:stretch}}
+.tyre-badge--both{background:#f3ecf9;color:#5a2a7a}
+.tyre-badge--unknown{background:#eeeeee;color:#666}
+.tyre-catalog-row{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;margin:-8px 0 16px}
+.tyre-catalog-info{margin:0;font-size:12px;color:var(--muted)}
+.tyre-catalog-row .text-button{padding:0;font-size:12px}
+.tyre-catalog-row .text-button:disabled{color:var(--muted);cursor:wait}
+.tyre-stock{display:flex;flex-direction:column;gap:4px;margin:4px 0 16px;padding:12px 14px;border:1px solid var(--line);background:#fff;font-size:13px}
+.tyre-stock[hidden]{display:none}
+.tyre-stock strong{font:700 12px 'DM Sans';letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.tyre-stock a{color:var(--teal);font-weight:700;font-size:12px;align-self:flex-start}
+.tyre-stock-state{font-weight:700}
+.tyre-stock-state--ok{color:#2a6e3a}
+.tyre-stock-state--out{color:#b33a1e}
+.tyre-stock-state--unknown,.tyre-stock-pending{color:var(--muted)}
+.tyre-cell-stock{white-space:nowrap}
+.tyre-cell-stock .tyre-stock-state{display:block;font-size:12px}
+.tyre-stock-date{display:block;font-size:10px;color:var(--muted);margin-top:2px}
+/* Reifen-Einsatz: Zaehler in "Meine Reifen" */
+.tyre-cell-runs{white-space:nowrap}
+.tyre-cell-runs b{display:inline-block;min-width:26px;text-align:center;font:700 16px 'Barlow Condensed'}
+.tyre-cell-runs--worn b{color:#b33a1e}
+.tyre-settings-panel{margin-top:15px}
+.tyre-settings-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.tyre-settings-row label{display:grid;gap:6px;color:var(--muted);font-size:11px;font-weight:700}
+.tyre-settings-row input,.tyre-settings-row select,.me-panel select{border:1px solid var(--line);background:#fff;padding:10px;font:500 14px 'DM Sans';color:var(--ink)}
+.tyre-settings-row small{font-weight:500}
+.me-panel{margin-bottom:15px}
+.me-panel select{min-width:280px;max-width:100%}
+/* Reifen-Auswahl im Dashboard */
+.me-badge{display:inline-block;margin-left:6px;padding:1px 6px;background:var(--acid);color:var(--navy);font:700 10px 'DM Sans';vertical-align:middle}
+.tyre-pick{margin-top:8px}
+.tyre-pick-label{display:block;font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px}
+.tyre-pick-chips{display:flex;flex-wrap:wrap;gap:6px}
+.tyre-chip{display:grid;grid-template-columns:auto 1fr;column-gap:6px;align-items:baseline;min-width:120px;max-width:220px;padding:6px 9px;border:1px solid var(--line);background:#fff;color:var(--ink);text-align:left;cursor:pointer;font:500 11px 'DM Sans'}
+.tyre-chip b{font:700 15px 'Barlow Condensed'}
+.tyre-chip span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tyre-chip small{grid-column:1 / -1;color:var(--muted);font-size:10px}
+.tyre-chip:hover{border-color:var(--teal)}
+.tyre-chip.selected{background:var(--navy);border-color:var(--navy);color:#fff;box-shadow:inset 3px 0 0 var(--acid)}
+.tyre-chip.selected small{color:#b9c9c5}
+.tyre-chip.worn:not(.selected),.tyre-chip.mismatch:not(.selected){border-color:#e6a38f;background:#fff6f2}
+.tyre-chip.worn small,.tyre-chip.mismatch small{color:#b33a1e}
+.tyre-pick-last,.tyre-pick-warn,.tyre-pick-empty{display:block;margin-top:6px;font-size:11px;color:var(--muted)}
+.tyre-pick-warn{color:#b33a1e;font-weight:700}
+.tyre-pick-hint{margin:0 0 6px;padding:10px 12px;background:#fff6d6;font-size:12px;color:#7a5b10}
+.tyre-pick-link{border:0;background:none;padding:0;color:var(--teal);font:700 inherit 'DM Sans';font-size:inherit;cursor:pointer;text-decoration:underline}
+@media(max-width:780px){.tyre-settings-row{grid-template-columns:1fr}.tyre-chip{min-width:0;max-width:100%}}
+.tyre-th-edge{text-align:center}

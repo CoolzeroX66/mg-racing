@@ -1,0 +1,76 @@
+.analysis-empty{display:grid;place-items:center;min-height:220px;border:1px dashed var(--line);background:#f8faf4;color:var(--muted);font-size:13px;text-align:center;padding:24px}
+.analysis-class-label{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px;padding:0}
+.best-laps-legend{display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px;background:#f7fafb;border-top:1px solid var(--line,#e0eaec);border-radius:0 0 8px 8px}
+.best-laps-title{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);align-self:center;margin-right:4px;white-space:nowrap}
+.best-lap-entry{display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line,#e0eaec);border-radius:20px;padding:4px 12px 4px 6px;font-size:12px}
+.best-lap-swatch{display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;color:#fff;font-size:11px;font-weight:800;flex-shrink:0}
+.best-lap-name{font-weight:600;color:var(--fg,#1a2e32)}
+.best-lap-time{font-weight:700;color:var(--fg,#1a2e32);font-variant-numeric:tabular-nums}
+.best-lap-round{font-size:11px;color:var(--muted);white-space:nowrap}
+/* Weather widget */
+.weather-widget{background:#ffffff;border:1px solid #e2eaec;border-radius:14px;padding:16px 20px;margin-bottom:20px;display:flex;flex-direction:column;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,.07)}
+.weather-widget--setup,.weather-widget--loading{background:#f4f8f9;border:1px dashed #c8d8da;border-radius:14px;color:#6a8a8d;font-size:13px;padding:14px 20px;margin-bottom:20px}
+.weather-main{display:flex;align-items:center;gap:12px}
+.weather-icon-img{width:64px;height:64px;flex-shrink:0;object-fit:contain}
+.weather-info{display:flex;flex-direction:column;gap:2px;flex:1}
+.weather-temp{font-size:30px;font-weight:700;line-height:1;color:#0f2426;letter-spacing:-.5px}
+.weather-desc{font-size:13px;color:#4a6a6d;line-height:1.4;margin-top:2px}
+.weather-location{font-size:11px;font-weight:600;color:#8aacaf;text-transform:uppercase;letter-spacing:.05em;margin-top:4px}
+.weather-refresh{margin-left:auto;align-self:flex-start;font-size:11px;color:#8aacaf;background:none;border:none;cursor:pointer;padding:4px 6px;border-radius:6px;white-space:nowrap}
+.weather-refresh:hover{background:#f0f7f8;color:#0e6568}
+.weather-precip{display:flex;flex-direction:column;gap:4px}
+.precip-row{display:flex;align-items:center;gap:8px}
+.precip-label{font-size:11px;color:#8aacaf;white-space:nowrap;min-width:36px}
+.precip-bar{flex:1;height:8px;background:#eaf2f3;border-radius:4px;position:relative;overflow:hidden}
+.precip-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,#5bbfc5,#1e88a8);transition:width .4s ease}
+.precip-pct{position:absolute;right:6px;top:50%;transform:translateY(-50%);font-size:10px;color:#4a6a6d;font-weight:600}
+.weather-rain-warning{font-size:12px;font-weight:600;color:#9a5c00;padding:7px 12px;background:#fff8e6;border-radius:8px;border-left:3px solid #f0a500}
+/* Weather settings */
+.weather-toggle-row{margin:10px 0}
+.weather-location-row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap;margin-top:12px}
+.weather-location-row label{flex:1;min-width:180px}
+.weather-location-found{font-size:12px;color:var(--muted);margin:6px 0 0}
+/* Renn-Analyse: aufklappbare Gruppen aus dem Zeitplan */
+.analysis-group{border-top:1px solid var(--line)}
+.analysis-group summary{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;padding:12px 0;cursor:pointer;list-style:none}
+.analysis-group summary::-webkit-details-marker{display:none}
+.analysis-group summary::before{content:"\25B8";color:var(--teal);font-size:12px;transition:transform .15s}
+.analysis-group[open] summary::before{transform:rotate(90deg)}
+.analysis-group summary strong{font-size:14px}
+.analysis-group-drivers{color:var(--teal);font-size:12px;font-weight:700}
+.analysis-group-count{margin-left:auto;color:var(--muted);font-size:11px}
+.analysis-group .analysis-list{padding:0 0 8px 20px}
+/* Renn-Analyse: Starterliste mit Auswahl fuer den Vergleich */
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.analysis-starters{margin:16px 0;border-top:1px solid var(--line);padding-top:14px}
+.analysis-starters-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 16px;margin-bottom:10px}
+.analysis-starters-head strong{font-size:14px}
+.analysis-starters-head strong span{margin-left:8px;color:var(--muted);font-size:12px;font-weight:600}
+.analysis-starters-actions .text-button{display:inline-block;margin:0 0 0 14px}
+.analysis-starters-scroll{overflow-x:auto}
+.analysis-starters-table{width:100%;border-collapse:collapse;font-size:13px;font-variant-numeric:tabular-nums}
+.analysis-starters-table th{text-align:left;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.08em;padding:0 8px 8px;white-space:nowrap}
+.analysis-starters-table td{border-top:1px solid var(--line);padding:8px;white-space:nowrap}
+.analysis-starters-table tr.is-off td{color:var(--muted);opacity:.55}
+.analysis-starters-table tr.is-mine td{background:#f5f8ea}
+.analysis-starters-table tr.is-mine .analysis-starter-name{font-weight:700}
+.analysis-toggle{display:inline-flex;align-items:center;gap:6px;cursor:pointer}
+.analysis-toggle input{width:16px;height:16px;accent-color:var(--teal);cursor:pointer}
+.analysis-toggle input:disabled{cursor:not-allowed}
+.analysis-tag{display:inline-block;margin-left:8px;padding:2px 6px;background:#e5e9e4;color:var(--muted);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.04em}
+.analysis-tag.mine{background:var(--acid);color:var(--navy)}
+.best-lap-entry.is-mine{border-color:var(--teal);box-shadow:inset 0 0 0 1px var(--teal)}
+/* Renn-Analyse: automatischer Import aus einem Ordner */
+.auto-import-panel{max-width:820px;margin-bottom:15px}
+.auto-import-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:12px 20px}
+.auto-import-note{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.5}
+.auto-import-note [data-watch-status]{color:var(--ink);font-weight:600}
+.auto-import-actions{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.auto-import-actions .text-button{display:inline-block;margin:0 6px}
+.auto-import-actions select{border:1px solid var(--line);background:var(--paper);padding:8px;font:600 12px 'DM Sans';color:var(--ink)}
+.auto-import-log{list-style:none;margin:14px 0 0;padding:0;border-top:1px solid var(--line)}
+.auto-import-log li{display:flex;gap:12px;padding:7px 0;border-bottom:1px solid var(--line);font-size:12px;color:var(--muted)}
+.auto-import-log li.ok{color:var(--ink)}
+.auto-import-log li.ok time{color:var(--teal)}
+.auto-import-log time{flex-shrink:0;font-weight:700;font-variant-numeric:tabular-nums}
+.auto-import-log b{font-weight:600}

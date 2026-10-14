@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10191c" />
+    <meta name="description" content="Renntag-Manager fuer RC-Car-Rennen" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="MG Racing" />
+    <link rel="apple-touch-icon" href="icons/icon-180.png" />
+    <link rel="icon" type="image/png" href="icons/icon-192.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="workflow.css" />
+    <link rel="stylesheet" href="dashboard-overrides.css?v=20260929f" />
+    <link rel="stylesheet" href="warning-overrides.css" />
+    <link rel="stylesheet" href="analysis-overrides.css?v=20260929f" />
+    <link rel="stylesheet" href="tyre-overrides.css?v=20260930f" />
+    <script src="vendor/pdf.min.js"></script>
+    <title>Mega Godzilla Racing Manager</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand"><span class="brand-mark">MG</span><div><strong>MEGA GODZILLA</strong><small>RACING MANAGER</small></div></div>
+        <div class="event-chip"><span class="live-dot"></span><div><small>AKTIVER RENNTAG</small><strong id="active-event-name">Kein Renntag</strong></div></div>
+        <nav>
+          <button class="nav-item active" data-view="start"><span>01</span>Renntag</button>
+          <button class="nav-item" data-view="dashboard"><span>02</span>Dashboard</button>
+          <button class="nav-item" data-view="fahrer"><span>03</span>Fahrer</button>
+          <button class="nav-item" data-view="zeitplan"><span>04</span>Zeitplan</button>
+          <button class="nav-item" data-view="import"><span>05</span>PDF-Import</button>
+          <button class="nav-item" data-view="edit"><span>06</span>Renntag bearbeiten</button>
+          <button class="nav-item" data-view="settings"><span>07</span>Einstellungen</button>
+          <button class="nav-item" data-view="analysis"><span>08</span>Renn-Analyse</button>
+          <button class="nav-item" data-view="reifen"><span>09</span>Reifen-Management</button>
+        </nav>
+        <div class="sidebar-bottom"><div class="sync-state"><span class="sync-icon">&#8635;</span><div><strong>Offline bereit</strong><small>Daten werden lokal gespeichert</small></div></div><small class="version">TESTVERSION 0.1</small></div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar"><div class="mobile-brand">MG / RENNTAG</div><select id="mobile-navigation" class="mobile-navigation" aria-label="Menü auswählen"><option value="start">Renntag</option><option value="dashboard">Dashboard</option><option value="fahrer">Fahrer</option><option value="zeitplan">Zeitplan</option><option value="import">PDF-Import</option><option value="edit">Renntag bearbeiten</option><option value="settings">Einstellungen</option><option value="analysis">Renn-Analyse</option><option value="reifen">Reifen-Management</option></select><div class="topbar-actions"><span class="connection"><i></i> Lokal aktiv</span><button class="icon-button" title="Einstellungen" data-view="settings">&#9881;</button></div></header>
+        <div id="app" class="content-wrap"></div>
+      </main>
+    </div>
+    <div id="name-check"></div>
+    <div id="toast" class="toast" role="status"></div>
+    <input id="file-input" type="file" accept=".pdf,.txt,.csv" hidden />
+    <input id="alarm-file-input" type="file" accept="audio/mpeg,.mp3" hidden />
+    <script src="tyre-catalog.js?v=20260930e"></script>
+    <script src="app.js?v=20260930f"></script>
+  </body>
+</html>
